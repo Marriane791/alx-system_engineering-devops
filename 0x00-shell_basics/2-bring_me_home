@@ -1,3 +1,2 @@
 #!/bin/bash
-HOME = /root/marrie
 cd $HOME
