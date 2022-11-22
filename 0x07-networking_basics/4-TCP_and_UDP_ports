@@ -1,0 +1,5 @@
+#!/usr/bin/env bash
+# Script displaying the listening ports
+# IP + port = socket
+
+netstat -l --program
