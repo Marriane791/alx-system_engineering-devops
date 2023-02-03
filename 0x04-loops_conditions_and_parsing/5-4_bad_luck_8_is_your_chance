@@ -1,17 +1,18 @@
 #!/usr/bin/env bash
 # Lucky and Unlucky number
 
-counter=0
-while [ $counter -lt 10 ]
+count=0
+
+while [ $count -lt 10 ]
 do
-    if [ $counter -eq 4 ]
-    then
-        echo "bad luck"
-    elif [ $counter -eq 8 ]
-    then
-        echo "good luck"
-    else
-        echo "Best School"
-    fi
-    (( counter++ ))
+  if [ $count -eq 3 ]
+  then
+    echo "bad luck"
+  elif [ $count -eq 7 ]
+  then
+    echo "good luck"
+  else
+    echo "Best School"
+  fi
+  (( count++ ))
 done
