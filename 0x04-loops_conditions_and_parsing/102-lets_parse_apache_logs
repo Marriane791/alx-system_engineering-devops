@@ -1,4 +1,4 @@
 #!/usr/bin/env bash
 # Viewing Apache log files
 
-awk '{print $1 $9 }' apache-access.log
+awk '{print $1 " " $9}' apache-access.log
