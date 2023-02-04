@@ -1,22 +1,22 @@
-# Postmoterm Report On 500 Server Error Expirienced by clients of PayMe App
+# Postmoterm Report On  PayMe Downtime
 ![what just happened](https://github.com/devmarrie/alx-system_engineering-devops/blob/master/0x19-postmortem/images/prob.gif?raw=true)
 
 ## Issue Summary
 
-From 8:19 AM to 9:30 AM EAT, requests to most PayMe APIs resulted in 500 error response messages. PayMe apis serving customer sign in, payments and dashboard were mostly affected. At its peak, the issue affected 100% of user login service and accessing their payments to various services aquired via the app. Users could continue to access certain APIs that run on separate infrastructures. The root cause of this outage was an invalid configuration change that exposed a bug in a widely used internal library.
+From 8:19 AM to 9:30 AM EAT, requests to most PayMe APIs resulted in 500 error response messages. PayMe apis serving customer sign in, payments and dashboard were mostly affected. At its peak, the issue affected 100% of user login  and  payments pages. Users could continue to access certain APIs that run on separate infrastructures. The root cause of this outage was an invalid configuration change that exposed a bug in a widely used internal library.
 
 Timeline (East African Time)
 
-    * 8:19 AM: Configuration push begins
-    * 8:24 AM: Outage begins
-    * 8:26 AM: Pagers alerted teams
-    * 9:15 AM: Successful resolving
-    * 9:19 AM: Server restarts begin
-    * 9:30 AM: 100% of traffic back online
+    - 8:19 AM: Configuration push begins
+    - 8:24 AM: Outage begins
+    - 8:26 AM: Pagers alerted teams
+    - 9:15 AM: Successful resolving
+    - 9:19 AM: Server restarts begin
+    - 9:30 AM: 100% of traffic back online
 
 ## Root Cause
 
-At 8:19 AM EAT, a configuration change on the user endpoint was inadvertently released to our production environment without first being released to the testing enviroment. This changes affected the ability of users to use their passwords to validate payments. Thus  at 8:26 AM EAT, the service outage began.
+At 8:19 AM EAT, a configuration change on the user endpoint was inadvertently released to our production environment without first being released to the testing enviroment. This changes affected the ability of users to use their passwords to validate payments. Thus  at 8:24 AM EAT, the service outage began.
 
 ## Resolution and recovery
 
