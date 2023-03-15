@@ -1,7 +1,9 @@
 #!/usr/bin/env bash
 
-#Function to display information about a subdomain
-
+# Function to display information about a subdomain
+# www --> 54.157.174.220
+# web-01 --> 52.23.178.156
+# web-02 --> 54.157.174.220
 disp() {
     domain="$1"
     subdomain="$2"
