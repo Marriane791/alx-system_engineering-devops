@@ -1,5 +1,4 @@
 #!/usr/bin/env bash
-
 # Function to display information about a subdomain
 # www --> 54.157.174.220
 # web-01 --> 52.23.178.156
