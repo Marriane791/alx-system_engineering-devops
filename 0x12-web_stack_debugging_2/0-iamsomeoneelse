@@ -1,0 +1,4 @@
+#!/usr/bin/env bash
+# Selecting a user and running whoami command
+# su command allows automatic changing of user.
+su "$1" -s /bin/bash -c 'whoami'
